@@ -26,6 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: login.php?sucesso=1");
         exit; //Finaliza o script imediatamente após o redirecionamento
 } else {
+     // Caso ocorra algum erro (ex: email duplicado), exibe o erro na tela 
+    echo "Erro ao cadastrar: " . $conn->error;
  
 
 }
